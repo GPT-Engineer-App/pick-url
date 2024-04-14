@@ -4,10 +4,12 @@ import App from "./App.jsx";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
 const colors = {
-  black: "#000",
-  white: "#fff",
+  black: "#fff",
+  white: "#000",
   green: "#38A169",
   red: "#E53E3E",
+  darkBg: "#1a202c",
+  lightText: "#fff",
 };
 
 const theme = extendTheme({ colors });

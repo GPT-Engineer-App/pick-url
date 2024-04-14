@@ -20,13 +20,13 @@ const Index = () => {
   };
 
   return (
-    <Box p={4}>
+    <Box p={4} bg="darkBg" color="lightText">
       <Heading as="h1" size="xl" mb={4}>
         Select URLs to Keep
       </Heading>
       <Stack spacing={4}>
         {urls.map((url, index) => (
-          <Box key={url} borderWidth={2} borderRadius="md" p={4} borderColor={selectedUrls.includes(url) ? "green" : "red"}>
+          <Box key={url} borderWidth={2} borderRadius="md" p={4} bg="white" color="black" borderColor={selectedUrls.includes(url) ? "green" : "red"}>
             <Checkbox isChecked={selectedUrls.includes(url)} onChange={() => handleUrlToggle(url)}>
               <Text fontSize="lg">{url}</Text>
             </Checkbox>
