@@ -26,7 +26,7 @@ const Index = () => {
       </Heading>
       <Stack spacing={4}>
         {urls.map((url, index) => (
-          <Box key={url} borderWidth={1} borderRadius="md" p={4}>
+          <Box key={url} borderWidth={2} borderRadius="md" p={4} borderColor={selectedUrls.includes(url) ? "green" : "red"}>
             <Checkbox isChecked={selectedUrls.includes(url)} onChange={() => handleUrlToggle(url)}>
               <Text fontSize="lg">{url}</Text>
             </Checkbox>
@@ -34,7 +34,7 @@ const Index = () => {
         ))}
       </Stack>
       <VStack mt={8} align="stretch">
-        <Button colorScheme="blue" onClick={handleCommit}>
+        <Button colorScheme="green" onClick={handleCommit}>
           Commit
         </Button>
       </VStack>
